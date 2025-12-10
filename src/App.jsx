@@ -1,6 +1,7 @@
-import './App.css'
-import LiquidEther from './components/backgrounds/LiquidEther/LiquidEther';
-import DotGrid from './components/backgrounds/DotGrid/DotGrid';
+import "./App.css";
+import LiquidEther from "./components/backgrounds/LiquidEther/LiquidEther";
+import DotGrid from "./components/backgrounds/DotGrid/DotGrid";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
@@ -35,9 +36,16 @@ function App() {
           returnDuration={1.5}
         />
       </div>
-
+      <div className="content">
+        <Header />
+        <main>
+          <div className="test">asd</div>
+          <section id="home">...</section>
+          <section id="projects">...</section>
+        </main>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
