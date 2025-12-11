@@ -2,12 +2,13 @@ import "./Header.css";
 import { useEffect, useState, useRef } from "react";
 import Icon from "../../assets/icon.svg";
 import Icon2 from "../../assets/icon2.svg";
+import { FaLinkedin } from "react-icons/fa";
 
 const FULL_NAME = "Alan Heidel";
 const navLinks = [
   { label: "Inicio", href: "#home" },
-  { label: "Sobre Mi", href: "#aboutme" },
   { label: "Proyectos", href: "#projects" },
+  { label: "Sobre Mi", href: "#aboutme" },
   { label: "Contacto", href: "#contact" },
 ];
 
@@ -37,7 +38,7 @@ export default function Header() {
       setDisplayName((prev) =>
         scrolled ? prev.slice(0, -1) : FULL_NAME.slice(0, prev.length + 1)
       );
-    }, 30);
+    }, 80);
     return () => clearTimeout(typingTimeout.current);
   }, [scrolled, displayName]);
 
@@ -60,7 +61,9 @@ export default function Header() {
       </nav>
 
       <div className="social-links">
-        <span>IG</span>
+        <a href="https://www.linkedin.com/in/alanheidel/">
+          <FaLinkedin className="header-link" color={"#747474ff"} />
+        </a>
       </div>
     </header>
   );
