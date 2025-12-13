@@ -32,17 +32,17 @@ export default function ProjectCard({
                         ))}
                     </div>
                     <div className="project-links">
-                        <a href={repoUrl} className="project-link-github" target="blank">
-                            <a className="project-link">
-                                <FaGithub size={28} color={"#f0f0f0"} />
-                            </a>
-                            Ver código
-                        </a>
                         <a href={liveUrl} className="project-link-demo" target="blank">
                             <i className="project-link" >
                                 <FaEye size={28} color={"#f0f0f0"} />
                             </i>
                             Ver demo
+                        </a>
+                        <a href={repoUrl} className="project-link-github" target="blank">
+                            <a className="project-link">
+                                <FaGithub size={28} color={"#f0f0f0"} />
+                            </a>
+                            Ver código
                         </a>
                     </div>
                 </div>
