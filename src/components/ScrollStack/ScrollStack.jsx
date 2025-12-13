@@ -73,7 +73,7 @@ export default function ScrollStack() {
                 const start = stickyTopPx + dist;
                 const end = stickyTopPx;
                 const t = clamp01((start - rect.top) / (start - end));
-                const scale = t;
+                const scale = 0.75 + 0.25 * t;
 
                 card.style.opacity = "1";
                 card.style.transform = `scale(${scale})`;
