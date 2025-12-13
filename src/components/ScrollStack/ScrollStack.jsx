@@ -7,6 +7,7 @@ import futbol from "../../assets/projects/futbol-img.jpg";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiExpress, SiTypescript, SiMysql, SiPhp, SiHtml5, SiCss3, SiJavascript, SiGooglesheets } from 'react-icons/si';
 import { TbDatabase } from 'react-icons/tb';
+import { div } from "three/tsl";
 
 
 <SiExpress />
@@ -97,23 +98,25 @@ export default function ScrollStack() {
     }, []);
 
     return (
-        <section className="projects-pin" ref={containerRef}>
-            <div className="projects-stack">
-                {projects.map((p, i) => (
-                    <ProjectCard
-                        key={i}
-                        title={p.title}
-                        description={p.description}
-                        image={p.image}
-                        tags={p.tags}
-                        liveUrl={p.liveUrl}
-                        repoUrl={p.repoUrl}
-                        index={i}
-                        type={p.type}
-                    />
-                ))}
-                <div className="projects-end" />
+        <div className="projects-section-container">
+            <div className="projects-pin" ref={containerRef}>
+                <div className="projects-stack">
+                    {projects.map((p, i) => (
+                        <ProjectCard
+                            key={i}
+                            title={p.title}
+                            description={p.description}
+                            image={p.image}
+                            tags={p.tags}
+                            liveUrl={p.liveUrl}
+                            repoUrl={p.repoUrl}
+                            index={i}
+                            type={p.type}
+                        />
+                    ))}
+                    <div className="projects-end" />
+                </div>
             </div>
-        </section>
+        </div>
     );
 }
