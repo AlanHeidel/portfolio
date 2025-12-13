@@ -1,0 +1,28 @@
+.projects-pin {
+    position: relative;
+    padding: 0;
+}
+
+.projects-stack {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.project-card {
+    position: sticky;
+    top: 10vh;
+    height: 70vh;
+    width: 100%;
+    margin-bottom: 100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1;
+    transform: translate3d(0, 60px, 0) scale(0.1);
+    will-change: transform, opacity;
+}
+
+.projects-end {
+    height: 10px;
+}

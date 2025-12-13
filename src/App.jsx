@@ -2,10 +2,11 @@ import "./App.css";
 import LiquidEther from "./components/backgrounds/LiquidEther/LiquidEther";
 import DotGrid from "./components/backgrounds/DotGrid/DotGrid";
 import Header from "./components/Header/Header";
-import Avatar from "./assets/img-avatar.png";
+import Avatar from "./assets/img-avatar.webp";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Slider from "./components/Slider/Slider.jsx";
 import Scrolldown from "./assets/scrolldown.svg";
+import ScrollStack from './components/ScrollStack/ScrollStack'
 
 function App() {
   return (
@@ -99,6 +100,9 @@ function App() {
             <div className="title-backdrop" data-text="Proyectos">
               <h2>Proyectos</h2>
             </div>
+            <ScrollStack />
+
+
           </section>
 
           <section className="about-section" id="aboutme">
