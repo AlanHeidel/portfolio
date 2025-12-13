@@ -130,14 +130,15 @@
 .project-link-github {
     padding: 4px 8px;
     background: #7c3aed;
-    border: 2px solid #7c3aed;
-    color: #1a1a1a;
+    border: 1px solid #7c3aed;
+    color: #ffffff;
 }
 
 .project-link-demo {
-    padding: 4px 8px;
-    border: 2px solid #7c3aed;
-    color: #ffffff;
+    padding: 4px 10px;
+    background: #ffffff;
+    border: 1px solid #8b8b8b;
+    color: #111;
 }
 
 .project-link-github,
@@ -153,7 +154,11 @@
 }
 
 .project-link-github svg {
-    fill: #1a1a1a;
+    fill: #ffffff;
+}
+
+.project-link-demo svg {
+    fill: #111;
 }
 
 .project-link-github:hover {
@@ -167,11 +172,11 @@
 }
 
 .project-link-demo:hover {
-    background: #9d4edd;
+    background: #cdb0ff;
     border-color: #9d4edd;
-    color: #1a1a1a;
+    color: #9d4edd;
 }
 
 .project-link-demo:hover svg {
-    fill: #1a1a1a;
+    fill: #9d4edd;
 }
