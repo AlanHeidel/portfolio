@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" role="img" aria-label="Developer illustration with coffee steam and floating code symbols">
+  <defs>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <linearGradient id="deskGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#231c31"/>
+      <stop offset="1" stop-color="#171220"/>
+    </linearGradient>
+
+    <linearGradient id="hoodieGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#2a233a"/>
+      <stop offset="1" stop-color="#1b1625"/>
+    </linearGradient>
+
+    <linearGradient id="laptopBackGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#2a2a33"/>
+      <stop offset="1" stop-color="#1d1d25"/>
+    </linearGradient>
+
+    <radialGradient id="violetGlow" cx="40%" cy="25%" r="60%">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Transparent background (no rect) -->
+  <!-- Subtle ambient glow -->
+  <circle cx="360" cy="120" r="240" fill="url(#violetGlow)"/>
+
+  <!-- Floating symbols (only 3) -->
+  <g opacity="0.35" fill="#a78bfa" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">
+    <text x="120" y="120" font-size="22">&lt;/&gt;
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 0 -10; 0 0" dur="4.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.4;0.25" dur="4.8s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="690" y="155" font-size="18">const
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 0 12; 0 0" dur="6.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.22;0.36;0.22" dur="6.2s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="640" y="280" font-size="20">{ }
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 0 -8; 0 0" dur="5.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.18;0.32;0.18" dur="5.6s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Desk -->
+  <g filter="url(#softShadow)">
+    <path d="M110 380 H790 a18 18 0 0 1 18 18 v18 H92 v-18 a18 18 0 0 1 18-18Z" fill="url(#deskGrad)"/>
+    <path d="M80 416 H820 v92 a18 18 0 0 1-18 18 H98 a18 18 0 0 1-18-18Z" fill="#120e1a"/>
+    <path d="M80 416 H820 v18 H80Z" fill="#221b31" opacity="0.55"/>
+  </g>
+
+  <!-- Person (no headphones) -->
+  <g>
+    <!-- Body -->
+    <path d="M330 240 C330 200, 365 172, 450 172 C535 172, 570 200, 570 240
+             L604 372 C609 392, 594 410, 572 410 H328 C306 410, 291 392, 296 372Z"
+          fill="url(#hoodieGrad)"/>
+    <path d="M395 235 C410 256, 490 256, 505 235 C500 286, 474 310, 450 310 C426 310, 400 286, 395 235Z"
+          fill="#161223" opacity="0.75"/>
+
+    <!-- Arms -->
+    <path d="M308 314 C280 334, 270 366, 282 394 C292 418, 324 424, 344 406
+             C370 383, 372 346, 350 320 C336 304, 320 304, 308 314Z"
+          fill="#d9ccff" opacity="0.9"/>
+    <path d="M592 314 C620 334, 630 366, 618 394 C608 418, 576 424, 556 406
+             C530 383, 528 346, 550 320 C564 304, 580 304, 592 314Z"
+          fill="#d9ccff" opacity="0.9"/>
+
+    <!-- Head -->
+    <circle cx="450" cy="150" r="46" fill="#efe8ff" opacity="0.98"/>
+    <!-- Minimal calm expression -->
+    <path d="M428 165 Q450 176 472 165" fill="none" stroke="#241c33" stroke-opacity="0.35" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Hair -->
+    <path d="M410 148 C418 118, 438 102, 450 102 C472 102, 494 116, 494 146
+             C476 140, 466 132, 450 132 C435 132, 425 140, 410 148Z"
+          fill="#171220" opacity="0.95"/>
+    <path d="M412 148 C420 134, 430 126, 450 126 C472 126, 484 136, 492 146"
+          fill="none" stroke="#7c3aed" stroke-opacity="0.22" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Laptop (back view only) -->
+  <g filter="url(#softShadow)">
+    <!-- Back lid -->
+    <path d="M330 252 H570 a22 22 0 0 1 22 22 v118 a22 22 0 0 1-22 22 H330 a22 22 0 0 1-22-22 V274 a22 22 0 0 1 22-22Z"
+          fill="url(#laptopBackGrad)"/>
+    <!-- subtle highlight border -->
+    <path d="M340 262 H560 a14 14 0 0 1 14 14 v104 a14 14 0 0 1-14 14 H340 a14 14 0 0 1-14-14 V276 a14 14 0 0 1 14-14Z"
+          fill="none" stroke="#7c3aed" stroke-opacity="0.18" stroke-width="2"/>
+
+    <!-- Apple logo centered correctly -->
+    <g transform="translate(450 322)" opacity="0.92">
+      <!-- leaf -->
+      <path d="M10 -22 C13 -26 15 -31 14 -36 C10 -35 6 -32 4 -29 C2 -26 0 -22 1 -18 C5 -18 8 -20 10 -22Z"
+            fill="#f2edff"/>
+      <!-- body -->
+      <path d="M0 -14 C4 -19 12 -20 16 -16 C20 -20 28 -19 32 -14
+               C37 -7 35 5 29 13 C26 17 23 20 18 20 C14 20 12 19 8 19
+               C4 19 2 20 -2 20 C-7 20 -10 17 -13 13 C-19 5 -21 -7 -16 -14
+               C-12 -19 -4 -20 0 -16 C1 -15 1 -14 0 -14Z"
+            fill="#f2edff"/>
+    </g>
+
+    <!-- Base -->
+    <path d="M300 410 H600 l24 36 a14 14 0 0 1-12 22 H288 a14 14 0 0 1-12-22Z"
+          fill="#14111b"/>
+    <path d="M324 420 H576" stroke="#7c3aed" stroke-opacity="0.22" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Coffee + animated steam -->
+  <g transform="translate(645 406)" filter="url(#softShadow)">
+    <!-- cup -->
+    <path d="M0 30 H80 L72 74 a12 12 0 0 1-12 10 H20 a12 12 0 0 1-12-10Z" fill="#171220"/>
+    <path d="M-6 20 H86 a10 10 0 0 1 10 10 v10 H-16 v-10 a10 10 0 0 1 10-10Z" fill="#241c33"/>
+    <path d="M78 38 C98 38, 98 68, 78 68" fill="none" stroke="#7c3aed" stroke-opacity="0.35" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- steam (3 wavy paths, animated) -->
+    <g transform="translate(18 0)" opacity="0.6" stroke="#a78bfa" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M6 10 C-2 0, 14 -6, 6 -16 C-2 -26, 16 -34, 8 -44">
+        <animateTransform attributeName="transform" type="translate"
+          values="0 0; 0 -10; 0 0" dur="2.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.25;0.7;0.25" dur="2.6s" repeatCount="indefinite"/>
+      </path>
+      <path d="M28 10 C20 0, 36 -6, 28 -16 C20 -26, 38 -34, 30 -44">
+        <animateTransform attributeName="transform" type="translate"
+          values="0 2; 0 -12; 0 2" dur="3.1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;0.65;0.2" dur="3.1s" repeatCount="indefinite"/>
+      </path>
+      <path d="M50 10 C42 0, 58 -6, 50 -16 C42 -26, 60 -34, 52 -44">
+        <animateTransform attributeName="transform" type="translate"
+          values="0 1; 0 -11; 0 1" dur="2.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.18;0.6;0.18" dur="2.9s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+</svg>

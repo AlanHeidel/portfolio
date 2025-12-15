@@ -36,11 +36,13 @@
 .index-main-content {
   display: flex;
   flex-direction: row;
+  margin-top: 100px;
 }
 
 .img-avatar {
-  width: 550px;
+  width: 680px;
   height: auto;
+  margin-left: 40px;
   z-index: 1;
 }
 
@@ -133,6 +135,7 @@
 
 .slider-wrapper {
   width: 100%;
+  margin-top: 80px;
 
   mask-image: linear-gradient(to right,
       transparent 0%,
