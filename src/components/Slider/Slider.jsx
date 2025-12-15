@@ -10,6 +10,7 @@ import {
   SiGit,
   SiDocker,
 } from "react-icons/si";
+import { useRef, useEffect, useState } from "react";
 
 const techIcons = [
   { label: "React", icon: SiReact },
@@ -24,9 +25,29 @@ const techIcons = [
 ];
 
 export default function Slider() {
+  const trackRef = useRef(null);
+  const [shift, setShift] = useState(0);
+  const copies = 3;
+
+  useEffect(() => {
+    if (trackRef.current) {
+      const halfWidth = trackRef.current.scrollWidth / copies;
+      setShift(halfWidth);
+    }
+  }, [copies]);
   return (
     <div className="slider-container">
-      <div className="slider-track">
+      <div
+        className="slider-track"
+        ref={trackRef}
+        style={{ "--shift": `${shift}px` }}
+      >
+        {techIcons.map(({ label, icon: Icon }) => (
+          <div key={label} className="tech-card">
+            <Icon className={"tech-icon"} size={40} />
+          </div>
+        ))}
+
         {techIcons.map(({ label, icon: Icon }) => (
           <div key={label} className="tech-card">
             <Icon className={"tech-icon"} size={40} />

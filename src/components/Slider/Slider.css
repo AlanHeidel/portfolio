@@ -19,18 +19,16 @@
 
 /* Animación de scroll infinito */
 @keyframes scroll {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(-50%);
+  to {
+    transform: translateX(calc(-1 * var(--shift, 0px)));
   }
 }
 
 /* Card de tecnología */
 .tech-card {
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

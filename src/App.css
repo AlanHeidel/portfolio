@@ -51,7 +51,6 @@
 }
 
 @keyframes pulse-glow {
-
   0%,
   100% {
     filter: drop-shadow(0 0 40px #7c3aed);
@@ -110,7 +109,6 @@
 
 .presentation-container h1,
 .presentation-container h3 {
-
   color: #f0f0f0;
   margin: 0;
   font-weight: 100;
@@ -137,16 +135,20 @@
   width: 100%;
   margin-top: 80px;
 
-  mask-image: linear-gradient(to right,
-      transparent 0%,
-      rgba(0, 0, 0, 1) 15%,
-      rgba(0, 0, 0, 1) 85%,
-      transparent 100%);
-  -webkit-mask-image: linear-gradient(to right,
-      transparent 0%,
-      rgba(0, 0, 0, 1) 15%,
-      rgba(0, 0, 0, 1) 85%,
-      transparent 100%);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 1) 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 1) 85%,
+    transparent 100%
+  );
 }
 
 .scrolldown-container {
@@ -164,7 +166,6 @@
 }
 
 @keyframes bounce {
-
   0%,
   100% {
     transform: translateY(0px);
@@ -182,9 +183,7 @@
 
 .projects-section {
   min-height: 100dvh;
-  background: linear-gradient(to bottom,
-      #060010 0%,
-      #1a1325 100%);
+  background: linear-gradient(to bottom, #060010 0%, #1a1325 100%);
 }
 
 .about-section {
@@ -216,10 +215,12 @@
   white-space: nowrap;
   z-index: -1;
   pointer-events: none;
-  background: linear-gradient(to right,
-      rgba(255, 255, 255, 0.09) 0%,
-      rgba(255, 255, 255, 0.05) 50%,
-      rgba(255, 255, 255, 0.02) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.09) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -231,4 +232,13 @@
   font-weight: 700;
   position: relative;
   z-index: 2;
+}
+
+@media (max-width: 1800px) {
+  .index-container {
+    width: 80%;
+  }
+  .projects-section-container {
+    width: 80%;
+  }
 }
