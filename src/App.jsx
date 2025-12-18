@@ -109,9 +109,9 @@ function App() {
                 <div className="floating-icon icon-1">
                   <svg viewBox="0 0 24 24" fill="black">
                     <circle cx="12" cy="12" r="2" />
-                    <ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="black" stroke-width="1.2" />
-                    <ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="black" stroke-width="1.2" transform="rotate(60 12 12)" />
-                    <ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="black" stroke-width="1.2" transform="rotate(120 12 12)" />
+                    <ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="black" strokeWidth="1.2" />
+                    <ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="black" strokeWidth="1.2" transform="rotate(60 12 12)" />
+                    <ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="black" strokeWidth="1.2" transform="rotate(120 12 12)" />
                   </svg>
                 </div>
 
@@ -119,8 +119,8 @@ function App() {
                   <span> {'</>'} </span>
                 </div>
 
-                <div class="floating-icon icon-3" data-tooltip="Server">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.8">
+                <div className="floating-icon icon-3" data-tooltip="Server">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.8">
                     <rect x="3" y="4" width="18" height="6" rx="1.8" />
                     <rect x="3" y="14" width="18" height="6" rx="1.8" />
                     <circle cx="7" cy="7" r="0.5" fill="black" />
@@ -128,8 +128,8 @@ function App() {
                   </svg>
                 </div>
 
-                <div class="floating-icon icon-4" data-tooltip="Database">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.8">
+                <div className="floating-icon icon-4" data-tooltip="Database">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.8">
                     <ellipse cx="12" cy="6" rx="8" ry="3" />
                     <path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6" />
                     <path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" />
