@@ -9,13 +9,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(38, 18, 71);
-    border: 1px solid rgb(74, 36, 136);
+    background: rgb(56, 56, 56);
+    border: 1px solid rgb(136, 136, 136);
     padding: 6px 16px;
     border-radius: 20px;
     font-size: 14px;
     font-weight: 500;
-    color: #a78bfa;
+    color: #ffff;
 }
 
 .projects-grid-1 {
@@ -39,7 +39,6 @@
     height: 530px;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
 }
 
 .project-image-1 img {
@@ -58,8 +57,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #111;
-    /* base */
+    background-color: #202020;
     background-image:
         linear-gradient(to right,
             rgba(255, 255, 255, 0.04) 1px,
@@ -73,8 +71,9 @@
     border-radius: 30px;
     padding: 44px;
     z-index: 2;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    min-height: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    height: 380px;
+    max-height: 380px;
     min-width: 700px;
 }
 
@@ -95,12 +94,12 @@
     top: 44px;
     right: 44px;
     font-size: 20px;
-    background: rgb(38, 18, 71);
-    border: 1px solid rgb(74, 36, 136);
+    background: rgb(56, 56, 56);
+    border: 1px solid rgb(136, 136, 136);
     padding: 6px 16px;
     border-radius: 20px;
     font-weight: 800;
-    color: #a78bfa;
+    color: #ffffff;
 }
 
 .project-information-1 h3 {
@@ -112,10 +111,11 @@
 
 
 .project-information-1 p {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.8;
     opacity: 0.8;
     margin: 20px 0;
+    color: rgb(158, 158, 158);
 }
 
 .project-links {
@@ -128,14 +128,12 @@
 }
 
 .project-link-github {
-    padding: 4px 8px;
-    background: #7c3aed;
-    border: 1px solid #7c3aed;
+    background: #000000;
+    border: 1px solid #000000;
     color: #ffffff;
 }
 
 .project-link-demo {
-    padding: 4px 10px;
     background: #ffffff;
     border: 1px solid #8b8b8b;
     color: #111;
@@ -145,6 +143,7 @@
 .project-link-demo {
     display: flex;
     align-items: center;
+    padding: 5px 11px;
     gap: 8px;
     border-radius: 10px;
     text-decoration: none;
@@ -162,8 +161,8 @@
 }
 
 .project-link-github:hover {
-    background: #9d4edd;
-    border-color: #9d4edd;
+    background: #363636;
+    border-color: #363636;
     color: #ffffff;
 }
 
@@ -172,11 +171,11 @@
 }
 
 .project-link-demo:hover {
-    background: #cdb0ff;
-    border-color: #9d4edd;
-    color: #9d4edd;
+    background: #000000;
+    border-color: #000000;
+    color: #ffffff;
 }
 
 .project-link-demo:hover svg {
-    fill: #9d4edd;
+    fill: #ffffff;
 }

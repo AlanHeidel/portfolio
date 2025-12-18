@@ -34,13 +34,13 @@ export default function ProjectCard({
                     <div className="project-links">
                         <a href={liveUrl} className="project-link-demo" target="blank">
                             <i className="project-link" >
-                                <FaEye size={28} color={"#f0f0f0"} />
+                                <FaEye size={27} color={"#ffff"} />
                             </i>
                             Ver demo
                         </a>
                         <a href={repoUrl} className="project-link-github" target="blank">
                             <a className="project-link">
-                                <FaGithub size={28} color={"#f0f0f0"} />
+                                <FaGithub size={27} color={"#ffff"} />
                             </a>
                             Ver código
                         </a>

@@ -4,5 +4,6 @@ body,
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background: #060010;
+  background: #181818;
+  font-family: sans-serif;
 }

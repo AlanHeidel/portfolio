@@ -16,7 +16,7 @@ import { div } from "three/tsl";
 const projects = [
     {
         title: "Restaurante",
-        description: "El sistema permite a los clientes realizar reservas y pedidos, mientras que el administrador cuenta con un dashboard para la gestión de clientes, reservas, pedidos y demás entidades del negocio. El proyecto fue pensado desde un enfoque de sistema real, modelando múltiples entidades y relaciones, con separación clara entre vistas de cliente y administración.",
+        description: "Realizar reservas y pedidos, con seccion administrador que cuenta con un dashboard para la gestión de clientes, reservas, pedidos y demás entidades del negocio. El proyecto fue pensado desde un enfoque de sistema real, modelando múltiples entidades y relaciones.",
         image: ppa,
         tags: [{ name: "React", icon: FaReact }, { name: "Node.js", icon: FaNodeJs }, { name: "Express", icon: SiExpress }, { name: "TypeScript", icon: SiTypescript }, { name: "MySQL", icon: SiMysql }, { name: "Mikro ORM", icon: TbDatabase }],
         repoUrl: "https://github.com/AlanHeidel/tp/blob/main/proposal.md",
