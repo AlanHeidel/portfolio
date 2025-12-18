@@ -3,9 +3,25 @@ import LiquidEther from "./components/backgrounds/LiquidEther/LiquidEther";
 import DotGrid from "./components/backgrounds/DotGrid/DotGrid";
 import Header from "./components/Header/Header";
 import Avatar from "./assets/img-personal.webp";
-import { FaGithub, FaLinkedin, FaInstagram, FaFolderOpen, FaEnvelope, FaUserCircle, FaStar, FaCode, FaMapMarkerAlt, FaGraduationCap, FaDownload } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaFolderOpen,
+  FaEnvelope,
+  FaUserCircle,
+  FaStar, FaCode,
+  FaMapMarkerAlt,
+  FaGraduationCap,
+  FaDownload,
+  FaDesktop,
+  FaNodeJs
+} from "react-icons/fa";
+import { SiReact, SiTypescript, SiJavascript, SiHtml5, SiCss3, SiTailwindcss, SiExpress, SiMysql } from 'react-icons/si';
+import { TbApi, TbDatabase } from 'react-icons/tb';
 import Slider from "./components/Slider/Slider.jsx";
 import AboutCard from "./components/AboutCard/AboutCard.jsx";
+import SkillsCard from "./components/SkillsCard/SkillsCard.jsx";
 import Scrolldown from "./assets/scrolldown.svg";
 import ScrollStack from './components/ScrollStack/ScrollStack'
 
@@ -136,11 +152,13 @@ function App() {
           </div>
 
           <section className="projects-section" id="projects">
-            <div className="title-backdrop" data-text="Proyectos">
-              <h2>Proyectos</h2>
+            <div className="projects-container">
+              <div className="title-backdrop" data-text="Proyectos">
+                <h2>Proyectos</h2>
+              </div>
+              <p className="section-description">Proyectos que muestran cómo abordo problemas reales y los transformo en soluciones funcionales.</p>
+              <ScrollStack />
             </div>
-            <p className="section-description">Proyectos que muestran cómo abordo problemas reales y los transformo en soluciones funcionales.</p>
-            <ScrollStack />
 
 
           </section>
@@ -174,8 +192,36 @@ function App() {
           </section>
 
           <section className="skills-section" id="skills">
-            <div className="title-backdrop" data-text="Skills">
-              <h2>Skills</h2>
+            <div className="skills-container">
+              <div className="title-backdrop" data-text="Skills">
+                <h2>Skills</h2>
+              </div>
+              <p className="section-description">Habilidades técnicas y conocimientos aplicados en proyectos, desarrollados mediante la práctica y el aprendizaje continuo.</p>
+              <div className="pill-toggle">
+                <button className="pill-btn active">Técnicas</button>
+                <button className="pill-btn">Blandas</button>
+              </div>
+              <div className="skills-cards-container">
+                <SkillsCard icon={< FaDesktop />} title='Frontend Development' skills={[
+                  { icon: < SiReact size={22} />, name: 'React' },
+                  { icon: < SiTypescript size={22} />, name: 'TypeScript' },
+                  { icon: < SiJavascript size={22} />, name: 'JavaScript' },
+                  { icon: < SiHtml5 size={22} />, name: 'HTML5' },
+                  { icon: < SiCss3 size={22} />, name: 'CSS3' },
+                  { icon: < SiTailwindcss size={22} />, name: 'Tailwind CSS' },
+                ]} />
+                <SkillsCard icon={< FaDesktop />} title='Backend Development' skills={[
+                  { icon: < FaNodeJs size={22} />, name: 'Node.js' },
+                  { icon: < SiExpress size={22} />, name: 'Express.js' },
+                  { icon: < SiJavascript size={22} />, name: 'JavaScript' },
+                  { icon: < TbDatabase size={22} />, name: 'MikroORM' },
+                  { icon: < SiMysql size={22} />, name: 'MySQL' },
+                  { icon: < TbApi size={22} />, name: 'REST APIs' },
+                ]} />
+              </div>
+              <div>
+
+              </div>
             </div>
           </section>
 
