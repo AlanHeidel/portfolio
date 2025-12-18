@@ -1,0 +1,50 @@
+.pill-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 300px;
+    padding: 6px;
+    border-radius: 99px;
+    background: #0e0e0e;
+    gap: 4px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pill-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 999px;
+    border: none;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    color: #ffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.pill-btn.active {
+    background: #ffff;
+    color: #000000;
+}
+
+.pill-btn:hover:not(.active) {
+    background: #2b2b2b;
+}
+
+.skills-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 100px;
+}

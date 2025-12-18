@@ -343,7 +343,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
   width: 75%;
 }
 
@@ -354,52 +354,7 @@
 
 .contact-container {
   width: 75%;
-  margin: 0 auto;
-}
-
-.pill-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 300px;
-  padding: 6px;
-  border-radius: 99px;
-  background: #0e0e0e;
-  gap: 4px;
-  margin-top: 60px;
-  margin-bottom: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.pill-btn {
-  border-radius: 999px;
-  border: none;
-  height: 100%;
-  width: 100%;
-  background: transparent;
-  color: #ffff;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.pill-btn.active {
-  background: #ffff;
-  color: #000000;
-}
-
-.pill-btn:hover:not(.active) {
-  background: #2b2b2b;
-}
-
-.skills-cards-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
+  margin: 50px auto 0 auto;
 }
 
 .title-backdrop {
@@ -445,6 +400,7 @@
   text-align: center;
   font-size: 20px;
   width: 50%;
+  line-height: 1.5;
 }
 
 @media (max-width: 1800px) {

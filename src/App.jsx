@@ -14,15 +14,11 @@ import {
   FaMapMarkerAlt,
   FaGraduationCap,
   FaDownload,
-  FaDesktop,
-  FaNodeJs,
-  FaServer
 } from "react-icons/fa";
-import { SiReact, SiTypescript, SiJavascript, SiHtml5, SiCss3, SiTailwindcss, SiExpress, SiMysql, SiVercel, SiVite, SiGit, SiPnpm, SiDocker } from 'react-icons/si';
-import { TbApi, TbDatabase } from 'react-icons/tb';
+
 import Slider from "./components/Slider/Slider.jsx";
 import AboutCard from "./components/AboutCard/AboutCard.jsx";
-import SkillsCard from "./components/SkillsCard/SkillsCard.jsx";
+import SkillsSection from "./components/SkillsSection/SkillsSection.jsx";
 import Scrolldown from "./assets/scrolldown.svg";
 import ScrollStack from './components/ScrollStack/ScrollStack'
 
@@ -198,47 +194,16 @@ function App() {
                 <h2>Skills</h2>
               </div>
               <p className="section-description">Habilidades técnicas y conocimientos aplicados en proyectos, desarrollados mediante la práctica y el aprendizaje continuo.</p>
-              <div className="pill-toggle">
-                <button className="pill-btn active">Técnicas</button>
-                <button className="pill-btn">Blandas</button>
-              </div>
-              <div className="skills-cards-container">
-                <SkillsCard icon={< FaDesktop />} title='Frontend Development' skills={[
-                  { icon: < SiReact size={22} />, name: 'React' },
-                  { icon: < SiTypescript size={22} />, name: 'TypeScript' },
-                  { icon: < SiJavascript size={22} />, name: 'JavaScript' },
-                  { icon: < SiHtml5 size={22} />, name: 'HTML5' },
-                  { icon: < SiCss3 size={22} />, name: 'CSS3' },
-                  { icon: < SiTailwindcss size={22} />, name: 'Tailwind CSS' },
-                ]} />
-
-                <SkillsCard icon={< FaServer />} title='Backend Development' skills={[
-                  { icon: < FaNodeJs size={22} />, name: 'Node.js' },
-                  { icon: < SiExpress size={22} />, name: 'Express.js' },
-                  { icon: < SiJavascript size={22} />, name: 'JavaScript' },
-                  { icon: < TbDatabase size={22} />, name: 'MikroORM' },
-                  { icon: < SiMysql size={22} />, name: 'MySQL' },
-                  { icon: < TbApi size={22} />, name: 'REST APIs' },
-                ]} />
-
-                <SkillsCard icon={< FaServer />} title='Development Tools' skills={[
-                  { icon: < SiDocker size={22} />, name: 'Docker' },
-                  { icon: < SiPnpm size={22} />, name: 'PNPM' },
-                  { icon: < SiGit size={22} />, name: 'Git' },
-                  { icon: < FaGithub size={22} />, name: 'GitHub' },
-                  { icon: < SiVite size={22} />, name: 'Vite' },
-                  { icon: < SiVercel size={22} />, name: 'Vercel' },
-                ]} />
-              </div>
-              <div>
-
-              </div>
+              <SkillsSection />
             </div>
           </section>
 
           <section className="contact-section" id="contact">
-            <div className="title-backdrop" data-text="Contacto">
-              <h2>Contacto</h2>
+            <div className="contact-container">
+              <div className="title-backdrop" data-text="Contacto">
+                <h2>Contacto</h2>
+              </div>
+
             </div>
           </section>
         </main>
