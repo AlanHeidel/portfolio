@@ -15,9 +15,10 @@ import {
   FaGraduationCap,
   FaDownload,
   FaDesktop,
-  FaNodeJs
+  FaNodeJs,
+  FaServer
 } from "react-icons/fa";
-import { SiReact, SiTypescript, SiJavascript, SiHtml5, SiCss3, SiTailwindcss, SiExpress, SiMysql } from 'react-icons/si';
+import { SiReact, SiTypescript, SiJavascript, SiHtml5, SiCss3, SiTailwindcss, SiExpress, SiMysql, SiVercel, SiVite, SiGit, SiPnpm, SiDocker } from 'react-icons/si';
 import { TbApi, TbDatabase } from 'react-icons/tb';
 import Slider from "./components/Slider/Slider.jsx";
 import AboutCard from "./components/AboutCard/AboutCard.jsx";
@@ -210,13 +211,23 @@ function App() {
                   { icon: < SiCss3 size={22} />, name: 'CSS3' },
                   { icon: < SiTailwindcss size={22} />, name: 'Tailwind CSS' },
                 ]} />
-                <SkillsCard icon={< FaDesktop />} title='Backend Development' skills={[
+
+                <SkillsCard icon={< FaServer />} title='Backend Development' skills={[
                   { icon: < FaNodeJs size={22} />, name: 'Node.js' },
                   { icon: < SiExpress size={22} />, name: 'Express.js' },
                   { icon: < SiJavascript size={22} />, name: 'JavaScript' },
                   { icon: < TbDatabase size={22} />, name: 'MikroORM' },
                   { icon: < SiMysql size={22} />, name: 'MySQL' },
                   { icon: < TbApi size={22} />, name: 'REST APIs' },
+                ]} />
+
+                <SkillsCard icon={< FaServer />} title='Development Tools' skills={[
+                  { icon: < SiDocker size={22} />, name: 'Docker' },
+                  { icon: < SiPnpm size={22} />, name: 'PNPM' },
+                  { icon: < SiGit size={22} />, name: 'Git' },
+                  { icon: < FaGithub size={22} />, name: 'GitHub' },
+                  { icon: < SiVite size={22} />, name: 'Vite' },
+                  { icon: < SiVercel size={22} />, name: 'Vercel' },
                 ]} />
               </div>
               <div>
