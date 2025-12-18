@@ -39,9 +39,9 @@ export default function ProjectCard({
                             Ver demo
                         </a>
                         <a href={repoUrl} className="project-link-github" target="blank">
-                            <a className="project-link">
+                            <i className="project-link">
                                 <FaGithub size={27} color={"#ffff"} />
-                            </a>
+                            </i>
                             Ver código
                         </a>
                     </div>
