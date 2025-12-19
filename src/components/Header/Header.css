@@ -90,3 +90,25 @@ nav button:hover {
   height: 25px;
   width: 25px;
 }
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.theme-toggle-img {
+  height: 40px;
+  width: 40px;
+  transition: all .3s ease;
+}
+
+.theme-toggle-img:hover {
+  transform: rotate(15deg);
+}
+
+.header-pill.scrolled .theme-toggle-img {
+  height: 35px;
+  width: 35px;
+}

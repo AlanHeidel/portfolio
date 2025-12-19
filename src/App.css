@@ -276,6 +276,14 @@
   align-items: center;
 }
 
+.scrolldown-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 5px 5px 10px 5px;
+}
+
 .scrolldown-img {
   width: 40px;
   height: auto;
@@ -287,11 +295,11 @@
 
   0%,
   100% {
-    transform: translateY(0px);
+    transform: translateY(-8px);
   }
 
   50% {
-    transform: translateY(12px);
+    transform: translateY(6px);
   }
 }
 

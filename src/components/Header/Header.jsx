@@ -2,8 +2,8 @@ import "./Header.css";
 import { useEffect, useState, useRef } from "react";
 import Icon from "../../assets/icon.svg";
 import Icon2 from "../../assets/icon2.svg";
-import { FaLinkedin } from "react-icons/fa";
 import { scrollToId } from "../../utils/scrollToId.jsx";
+import themeIcon from "../../assets/theme-icon.svg"
 
 const FULL_NAME = "Alan Heidel";
 const navLinks = [
@@ -64,9 +64,9 @@ export default function Header() {
       </nav>
 
       <div className="social-links">
-        <a href="https://www.linkedin.com/in/alanheidel/">
-          <FaLinkedin className="header-link" color={"#747474ff"} />
-        </a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar tema">
+          <img className="theme-toggle-img" src={themeIcon} alt="change-theme" />
+        </button>
       </div>
     </header>
   );

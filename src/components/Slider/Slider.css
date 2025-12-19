@@ -28,14 +28,12 @@
   }
 }
 
-/* Card de tecnología */
 .tech-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 100px;
   transition: all 0.3s ease;
-  cursor: pointer;
   color: #747474ff;
 }
 

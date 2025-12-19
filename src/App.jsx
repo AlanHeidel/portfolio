@@ -147,7 +147,9 @@ function App() {
             </div>
 
             <div className="scrolldown-container">
-              <img className="scrolldown-img" src={Scrolldown} alt="" />
+              <button className="scrolldown-btn" onClick={() => scrollToId('projects')}>
+                <img className="scrolldown-img" src={Scrolldown} alt="" />
+              </button>
             </div>
           </div>
 
