@@ -30,6 +30,7 @@
   height: 95dvh;
   width: 75%;
   margin: 0 auto;
+  scroll-margin-top: 100px;
 }
 
 .index-main-content {
@@ -303,12 +304,14 @@
   margin-top: 50px;
   min-height: 100dvh;
   background: linear-gradient(to bottom, #181818 0%, #1d1d1d 100%);
+  scroll-margin-top: 50px;
 }
 
 .about-section {
-  margin: 50px auto 100px auto;
   background: #181818;
-  width: 75%;
+  margin-top: 60px;
+  scroll-margin-top: 55px;
+  min-height: 100dvh;
 }
 
 .about-container {
@@ -317,7 +320,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 100px;
-  margin-top: 60px;
+  width: 75%;
+  margin: 100px auto 100px auto
 }
 
 .about-img {

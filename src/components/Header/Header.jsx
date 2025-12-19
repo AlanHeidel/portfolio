@@ -3,14 +3,17 @@ import { useEffect, useState, useRef } from "react";
 import Icon from "../../assets/icon.svg";
 import Icon2 from "../../assets/icon2.svg";
 import { FaLinkedin } from "react-icons/fa";
+import { scrollToId } from "../../utils/scrollToId.jsx";
 
 const FULL_NAME = "Alan Heidel";
 const navLinks = [
-  { label: "Inicio", href: "#home" },
-  { label: "Proyectos", href: "#projects" },
-  { label: "Sobre Mi", href: "#aboutme" },
-  { label: "Contacto", href: "#contact" },
+  { label: "Inicio", href: "home" },
+  { label: "Proyectos", href: "projects" },
+  { label: "Sobre Mi", href: "aboutme" },
+  { label: "Skills", href: "skills" },
+  { label: "Contacto", href: "contact" },
 ];
+
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -38,7 +41,7 @@ export default function Header() {
       setDisplayName((prev) =>
         scrolled ? prev.slice(0, -1) : FULL_NAME.slice(0, prev.length + 1)
       );
-    }, 80);
+    }, 60);
     return () => clearTimeout(typingTimeout.current);
   }, [scrolled, displayName]);
 
@@ -52,9 +55,9 @@ export default function Header() {
 
       <nav>
         <ul>
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a href={link.href}>{link.label}</a>
+          {navLinks.map((link, i) => (
+            <li key={i}>
+              <button onClick={() => scrollToId(link.href)} >{link.label}</button>
             </li>
           ))}
         </ul>

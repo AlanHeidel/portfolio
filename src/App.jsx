@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Avatar from "./assets/img-personal.webp";
 import IconLogo from "./assets/icon.svg"
 import IconLogo2 from "./assets/icon2.svg"
+import { scrollToId } from "./utils/scrollToId.jsx";
 import {
   FaGithub,
   FaLinkedin,
@@ -96,8 +97,8 @@ function App() {
                   </div>
                 </div>
                 <div className="buttons-container">
-                  <button className="btn-primary"><FaFolderOpen size={18} className={"icon-btn"} /> Ver Proyectos</button>
-                  <button className="btn-secondary"><FaEnvelope size={18} className={"icon-btn"} />Contáctame</button>
+                  <button className="btn-primary" onClick={() => scrollToId('projects')}><FaFolderOpen size={18} className={"icon-btn"} /> Ver Proyectos</button>
+                  <button className="btn-secondary" onClick={() => scrollToId('contact')}><FaEnvelope size={18} className={"icon-btn"} />Contáctame</button>
                 </div>
               </div>
               <div className="avatar-content">
