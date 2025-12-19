@@ -157,6 +157,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
 }
 
 .btn-secondary {
@@ -173,6 +174,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
 }
 
 .btn-primary:hover {
@@ -349,12 +351,12 @@
 
 .contact-section {
   background: #181818;
-  min-height: 100dvh;
+  height: auto;
 }
 
 .contact-container {
   width: 75%;
-  margin: 50px auto 0 auto;
+  margin: 100px auto 100px auto;
 }
 
 .title-backdrop {
@@ -401,6 +403,67 @@
   font-size: 20px;
   width: 50%;
   line-height: 1.5;
+}
+
+.footer {
+  border-top: 1px solid rgb(63, 63, 63);
+  padding: 30px 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.buttons-container-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.creator img {
+  width: 18px;
+  height: 18px;
+}
+
+.creator span {
+  color: #747474ff;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.social-links-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links-footer a {
+  padding: 5px;
+}
+
+.social-links-footer a i svg {
+  color: #747474ff;
+  width: 24px;
+  height: 24px;
+  transition: all .3s ease;
+}
+
+.social-links-footer a:hover i svg {
+  color: #ffffff;
 }
 
 @media (max-width: 1800px) {

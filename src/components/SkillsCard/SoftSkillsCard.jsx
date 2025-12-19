@@ -6,7 +6,7 @@ export default function SoftSkillsCard({
     description
 }) {
     return (
-        <div className='soft-skills-card'>
+        <article className='soft-skills-card'>
             <div className='soft-skills-card-title-container'>
                 <div className='soft-skills-card-icon'>
                     {icon}
@@ -16,6 +16,6 @@ export default function SoftSkillsCard({
             <div className='soft-skills-description-container'>
                 <p className='soft-skills-description'>{description}</p>
             </div>
-        </div >
+        </article>
     )
 }

@@ -3,6 +3,8 @@ import LiquidEther from "./components/backgrounds/LiquidEther/LiquidEther";
 import DotGrid from "./components/backgrounds/DotGrid/DotGrid";
 import Header from "./components/Header/Header";
 import Avatar from "./assets/img-personal.webp";
+import IconLogo from "./assets/icon.svg"
+import IconLogo2 from "./assets/icon2.svg"
 import {
   FaGithub,
   FaLinkedin,
@@ -70,21 +72,21 @@ function App() {
                 </div>
                 <div className="social-container">
                   <div className="social-contact">
-                    <a href="https://www.linkedin.com/in/alanheidel/">
+                    <a href="https://www.linkedin.com/in/alanheidel/" target="blank">
                       <FaLinkedin
                         className={"social-icon"}
                         size={30}
                         color={"#f0f0f0"}
                       />
                     </a>
-                    <a href="https://github.com/AlanHeidel">
+                    <a href="https://github.com/AlanHeidel" target="blank">
                       <FaGithub
                         className={"social-icon"}
                         size={30}
                         color={"#f0f0f0"}
                       />
                     </a>
-                    <a href="https://www.instagram.com/alanheidel/">
+                    <a href="https://www.instagram.com/alanheidel/" target="blank">
                       <FaInstagram
                         className={"social-icon"}
                         size={30}
@@ -203,11 +205,39 @@ function App() {
               <div className="title-backdrop" data-text="Contacto">
                 <h2>Contacto</h2>
               </div>
-
+              <p className="section-description">Estoy abierto a nuevas oportunidades y proyectos desafiantes. No dudes en contactarme para conversar y explorar posibles colaboraciones.</p>
+              <div className="buttons-container-footer">
+                <a href="https://www.linkedin.com/in/AlanHeidel/" className="btn-primary" target="blank" ><FaLinkedin size={20} className={"icon-btn"} />Perfil de Linkedin</a>
+                <a href="mailto:alanmax2015.aheidel@gmail.com" className="btn-secondary" target="blank"><FaEnvelope size={20} className={"icon-btn"} />Enviar e-mail</a>
+              </div>
             </div>
           </section>
         </main>
       </div>
+      <footer className="footer">
+        <div className="footer-container">
+          <div className="creator">
+            <a href="">
+              <img src={IconLogo} alt="icon-logo" />
+              <img src={IconLogo2} alt="icon-logo" />
+            </a>
+            <span>Creado con React. © 2025 Alan Heidel</span>
+          </div>
+          <div className="social-links-footer">
+            <a href="https://www.linkedin.com/in/AlanHeidel/" target="blank">
+              <i>< FaLinkedin /></i>
+            </a>
+
+            <a href="https://github.com/AlanHeidel" target="blank">
+              <i><FaGithub /></i>
+            </a>
+
+            <a href="mailto:alanmax2015.aheidel@gmail.com" target="blank">
+              <i><FaEnvelope /></i>
+            </a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

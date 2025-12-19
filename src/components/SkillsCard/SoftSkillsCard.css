@@ -8,7 +8,13 @@
     max-width: 350px;
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: all .3s ease;
+}
+
+.soft-skills-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
 }
 
 .soft-skills-card-title-container {

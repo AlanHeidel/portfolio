@@ -24,7 +24,7 @@ const projects = [
         type: "Full Stack",
     },
     {
-        title: "Complejo Futbol 5",
+        title: "Complejo Fútbol 5",
         description: "La aplicación tiene como objetivo presentar el complejo de manera atractiva, destacando las canchas y el bar, mientras permite a los usuarios reservar turnos de forma simple. Por otro lado, el administrador puede acceder a un panel para visualizar y gestionar las reservas realizadas, centralizando la operación del negocio.",
         image: futbol,
         tags: [{ name: "React", icon: FaReact }, { name: "Node.js", icon: FaNodeJs }, { name: "Express", icon: SiExpress }, { name: "MySQL", icon: SiMysql }, { name: "Mikro ORM", icon: TbDatabase }],

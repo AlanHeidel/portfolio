@@ -6,7 +6,7 @@ export default function SkillsCard({
     skills = []
 }) {
     return (
-        <div className='skills-card'>
+        <article className='skills-card'>
             <div className='skills-card-title-container'>
                 <div className='skills-card-icon'>
                     {icon}
@@ -21,6 +21,6 @@ export default function SkillsCard({
                     </span>
                 ))}
             </div>
-        </div >
+        </article>
     )
 }
