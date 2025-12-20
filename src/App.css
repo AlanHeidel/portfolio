@@ -348,6 +348,12 @@
   gap: 30px;
 }
 
+.btn-about-cv-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .skills-section {
   background: var(--bg-secondary);
   min-height: 100dvh;

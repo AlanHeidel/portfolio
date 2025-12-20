@@ -57,7 +57,7 @@ export default function ScrollStack() {
         const stickyTopVh = 10; // coincide con CSS top: 10vh
         const getStickyTopPx = () => (window.innerHeight * stickyTopVh) / 100;
 
-        const enterDistance = () => window.innerHeight * 1;
+        const enterDistance = () => window.innerHeight;
 
         let rafId = null;
 
@@ -73,11 +73,17 @@ export default function ScrollStack() {
                 const start = stickyTopPx + dist;
                 const end = stickyTopPx;
                 const t = clamp01((start - rect.top) / (start - end));
+
+                // Escala de 0.75 a 1
                 const scale = 0.75 + 0.25 * t;
 
+                // TranslateY de 60px a 0
+                const translateY = 60 * (1 - t);
+
                 card.style.opacity = "1";
-                card.style.transform = `scale(${scale})`;
+                card.style.transform = `translate3d(0, ${translateY}px, 0) scale(${scale})`;
             }
+
         };
 
         const onScroll = () => {

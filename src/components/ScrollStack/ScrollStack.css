@@ -11,8 +11,8 @@
 
 .project-card {
     position: sticky;
-    top: 14vh;
-    height: 70vh;
+    top: 100px;
+    height: 75vh;
     width: 100%;
     margin-bottom: 130px;
     color: white;
@@ -20,10 +20,4 @@
     flex-direction: column;
     justify-content: center;
     opacity: 1;
-    transform: translate3d(0, 60px, 0) scale(0.1);
-    will-change: transform, opacity;
-}
-
-.projects-end {
-    height: 10px;
 }
