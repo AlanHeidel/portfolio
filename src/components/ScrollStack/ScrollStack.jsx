@@ -7,7 +7,6 @@ import futbol from "../../assets/projects/futbol-img.jpg";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiExpress, SiTypescript, SiMysql, SiPhp, SiHtml5, SiCss3, SiJavascript, SiGooglesheets } from 'react-icons/si';
 import { TbDatabase } from 'react-icons/tb';
-import { div } from "three/tsl";
 
 
 <SiExpress />

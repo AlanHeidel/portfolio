@@ -14,7 +14,7 @@
 }
 
 .header-pill.scrolled {
-  background: #0000001e;
+  background: var(--bg-header);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 99px;
@@ -33,7 +33,7 @@
   gap: 0.5rem;
   font-size: 25px;
   letter-spacing: 0.02em;
-  color: #ffffff;
+  color: var(--text-primary);
   transition: all 0.3s ease;
 }
 
@@ -61,7 +61,7 @@ nav button {
   border-radius: 999px;
   font-size: 20px;
   font-weight: 500;
-  color: #f5f5f5;
+  color: var(--text-primary);
   background: transparent;
   text-decoration: none;
   text-wrap: nowrap;
@@ -72,8 +72,7 @@ nav button {
 }
 
 nav button:hover {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  background: var(--bg-hover-header);
 }
 
 .header-pill.scrolled nav button {
@@ -92,23 +91,36 @@ nav button:hover {
 }
 
 .theme-toggle {
+  position: relative;
   background: transparent;
   border: none;
   appearance: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.theme-toggle-img {
+.theme-toggle:hover .theme-icon.show {
+  transform: rotate(-30deg);
+}
+
+.theme-icon {
+  position: absolute;
   height: 40px;
   width: 40px;
-  transition: all .3s ease;
+  opacity: 0;
+  transform-origin: center;
+  transform: rotate(-360deg) scale(0.8);
+  transition: all .5s ease;
 }
 
-.theme-toggle-img:hover {
-  transform: rotate(15deg);
+.theme-icon.show {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
 }
 
-.header-pill.scrolled .theme-toggle-img {
+.header-pill.scrolled .theme-icon {
   height: 35px;
   width: 35px;
 }

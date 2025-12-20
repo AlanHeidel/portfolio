@@ -1,5 +1,5 @@
 import "./App.css";
-import LiquidEther from "./components/backgrounds/LiquidEther/LiquidEther";
+import { useEffect, useState } from "react";
 import DotGrid from "./components/backgrounds/DotGrid/DotGrid";
 import Header from "./components/Header/Header";
 import Avatar from "./assets/img-personal.webp";
@@ -18,14 +18,23 @@ import {
   FaGraduationCap,
   FaDownload,
 } from "react-icons/fa";
-
 import Slider from "./components/Slider/Slider.jsx";
 import AboutCard from "./components/AboutCard/AboutCard.jsx";
 import SkillsSection from "./components/SkillsSection/SkillsSection.jsx";
-import Scrolldown from "./assets/scrolldown.svg";
 import ScrollStack from './components/ScrollStack/ScrollStack'
 
 function App() {
+  const [colors, setColors] = useState({ base: '#252525', active: '#a1a1a1' });
+  const [theme, setTheme] = useState(() =>
+    localStorage.getItem('theme') || 'dark'
+  );
+
+  useEffect(() => {
+    const root = getComputedStyle(document.documentElement);
+    const base = root.getPropertyValue('--bg-baseColor').trim();
+    const active = root.getPropertyValue('--bg-activeColor').trim();
+    setColors({ base, active });
+  }, [theme]);
   return (
     <>
       <div className="background-container">
@@ -49,8 +58,8 @@ function App() {
         <DotGrid
           dotSize={3}
           gap={25}
-          baseColor="#252525"
-          activeColor="#a1a1a1"
+          baseColor={colors.base}
+          activeColor={colors.active}
           proximity={120}
           shockRadius={150}
           shockStrength={5}
@@ -59,7 +68,7 @@ function App() {
         />
       </div>
       <div className="content">
-        <Header />
+        <Header theme={theme} setTheme={setTheme} />
         <main className="main-content">
           <div className="index-container" id="home">
             <div className="index-main-content">
@@ -77,21 +86,21 @@ function App() {
                       <FaLinkedin
                         className={"social-icon"}
                         size={30}
-                        color={"#f0f0f0"}
+                        color={"currentColor"}
                       />
                     </a>
                     <a href="https://github.com/AlanHeidel" target="blank">
                       <FaGithub
                         className={"social-icon"}
                         size={30}
-                        color={"#f0f0f0"}
+                        color={"currentColor"}
                       />
                     </a>
                     <a href="https://www.instagram.com/alanheidel/" target="blank">
                       <FaInstagram
                         className={"social-icon"}
                         size={30}
-                        color={"#f0f0f0"}
+                        color={"currentColor"}
                       />
                     </a>
                   </div>
@@ -110,11 +119,11 @@ function App() {
                   />
                 </div>
                 <div className="floating-icon icon-1">
-                  <svg viewBox="0 0 24 24" fill="black">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
                     <circle cx="12" cy="12" r="2" />
-                    <ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="black" strokeWidth="1.2" />
-                    <ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="black" strokeWidth="1.2" transform="rotate(60 12 12)" />
-                    <ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="black" strokeWidth="1.2" transform="rotate(120 12 12)" />
+                    <ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="currentColor" strokeWidth="1.2" />
+                    <ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="currentColor" strokeWidth="1.2" transform="rotate(60 12 12)" />
+                    <ellipse cx="12" cy="12" rx="11" ry="4.5" fill="none" stroke="currentColor" strokeWidth="1.2" transform="rotate(120 12 12)" />
                   </svg>
                 </div>
 
@@ -123,16 +132,16 @@ function App() {
                 </div>
 
                 <div className="floating-icon icon-3" data-tooltip="Server">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.8">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <rect x="3" y="4" width="18" height="6" rx="1.8" />
                     <rect x="3" y="14" width="18" height="6" rx="1.8" />
-                    <circle cx="7" cy="7" r="0.5" fill="black" />
-                    <circle cx="7" cy="17" r="0.5" fill="black" />
+                    <circle cx="7" cy="7" r="0.5" fill="currentColor" />
+                    <circle cx="7" cy="17" r="0.5" fill="currentColor" />
                   </svg>
                 </div>
 
                 <div className="floating-icon icon-4" data-tooltip="Database">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.8">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <ellipse cx="12" cy="6" rx="8" ry="3" />
                     <path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6" />
                     <path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" />
@@ -148,7 +157,13 @@ function App() {
 
             <div className="scrolldown-container">
               <button className="scrolldown-btn" onClick={() => scrollToId('projects')}>
-                <img className="scrolldown-img" src={Scrolldown} alt="" />
+                <svg className="scrolldown-img" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="10" y1="40" x2="50" y2="80"
+                    stroke="currentColor" strokeWidth="12" strokeLinecap="round" />
+                  <line x1="90" y1="40" x2="50" y2="80"
+                    stroke="currentColor" strokeWidth="12" strokeLinecap="round" />
+                </svg>
+
               </button>
             </div>
           </div>
@@ -220,10 +235,10 @@ function App() {
       <footer className="footer">
         <div className="footer-container">
           <div className="creator">
-            <a href="">
+            <button className="btn-footer" onClick={() => scrollToId('home')}>
               <img src={IconLogo} alt="icon-logo" />
               <img src={IconLogo2} alt="icon-logo" />
-            </a>
+            </button>
             <span>Creado con React. © 2025 Alan Heidel</span>
           </div>
           <div className="social-links-footer">

@@ -34,7 +34,7 @@
   align-items: center;
   margin-right: 100px;
   transition: all 0.3s ease;
-  color: #747474ff;
+  color: var(--text-secondary);
 }
 
 .tech-card:hover {
@@ -42,5 +42,5 @@
 }
 
 .tech-card:hover .tech-icon {
-  color: #ffff;
+  color: var(--text-primary);
 }

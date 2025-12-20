@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background: #181818;
+    background: var(--bg-primary);
     height: 180px;
     max-width: 350px;
     border-radius: 15px;
@@ -32,19 +32,19 @@
     height: 38px;
     width: 38px;
     padding: 10px;
-    background: #ffff;
+    background: var(--text-primary);
     border-radius: 50%;
 }
 
 .soft-skills-card-icon svg {
     height: 29px;
     width: 29px;
-    fill: #000000;
+    fill: var(--text-oposite);
 }
 
 .soft-skills-card-title {
     font-size: 20px;
-    color: #ffff;
+    color: var(--text-primary);
     margin: 0;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .soft-skills-description {
-    color: #747474ff;
+    color: var(--text-secondary);
     text-align: center;
     margin: 10px 0 0 0;
     font-size: 14px;

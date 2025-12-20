@@ -34,11 +34,11 @@
 
 .about-card-title {
     font-size: 18px;
-    color: #ffff;
+    color: var(--text-primary);
 }
 
 .about-card-description {
     font-size: 14px;
-    color: #747474ff;
+    color: var(--text-secondary);
     line-height: 1.8;
 }

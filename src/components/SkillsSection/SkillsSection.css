@@ -6,7 +6,7 @@
     width: 300px;
     padding: 6px;
     border-radius: 99px;
-    background: #0e0e0e;
+    background: var(--text-oposite);
     gap: 4px;
     margin-top: 60px;
     margin-bottom: 40px;
@@ -23,20 +23,20 @@
     height: 100%;
     width: 100%;
     background: transparent;
-    color: #ffff;
+    color: var(--text-primary);
     cursor: pointer;
-    transition: all 0.2s ease;
     font-size: 16px;
     font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 .pill-btn.active {
-    background: #ffff;
-    color: #000000;
+    background: var(--text-primary);
+    color: var(--text-oposite);
 }
 
 .pill-btn:hover:not(.active) {
-    background: #2b2b2b;
+    background: var(--bg-hover-header);
 }
 
 .skills-cards-container {

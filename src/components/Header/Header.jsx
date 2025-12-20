@@ -3,7 +3,8 @@ import { useEffect, useState, useRef } from "react";
 import Icon from "../../assets/icon.svg";
 import Icon2 from "../../assets/icon2.svg";
 import { scrollToId } from "../../utils/scrollToId.jsx";
-import themeIcon from "../../assets/theme-icon.svg"
+import SunIcon from "../../assets/theme/sun-icon.svg"
+import MoonIcon from "../../assets/theme/moon-icon.svg"
 
 const FULL_NAME = "Alan Heidel";
 const navLinks = [
@@ -15,10 +16,18 @@ const navLinks = [
 ];
 
 
-export default function Header() {
+export default function Header({ theme, setTheme }) {
   const [scrolled, setScrolled] = useState(false);
   const [displayName, setDisplayName] = useState(FULL_NAME);
   const typingTimeout = useRef();
+
+  useEffect(() => {
+    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.add(theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +56,7 @@ export default function Header() {
 
   return (
     <header className={`header-pill${scrolled ? " scrolled" : ""}`}>
-      <div className={`name-container${scrolled ? " scrolled" : ""}`}>
+      <div onClick={() => scrollToId('home')} className={`name-container${scrolled ? " scrolled" : ""}`}>
         <img src={Icon} alt="Logo" width={22} height={22} />
         <span className="name">{displayName}</span>
         <img src={Icon2} alt="Logo" width={22} height={22} />
@@ -63,9 +72,10 @@ export default function Header() {
         </ul>
       </nav>
 
-      <div className="social-links">
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar tema">
-          <img className="theme-toggle-img" src={themeIcon} alt="change-theme" />
+      <div className="theme-container">
+        <button className="theme-toggle" onClick={toggleTheme} aria-label="Change theme">
+          <img src={SunIcon} alt="" className={`theme-icon sun ${theme === 'dark' ? 'show' : ''}`} />
+          <img src={MoonIcon} alt="" className={`theme-icon moon ${theme === 'light' ? 'show' : ''}`} />
         </button>
       </div>
     </header>

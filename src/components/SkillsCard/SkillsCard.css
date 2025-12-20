@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: start;
     justify-content: space-around;
-    background: #181818;
+    background: var(--bg-primary);
     height: 310px;
     width: 350px;
     border-radius: 15px;
@@ -33,19 +33,19 @@
     height: 38px;
     width: 38px;
     padding: 10px;
-    background: #ffff;
+    background: var(--text-primary);
     border-radius: 50%;
 }
 
 .skills-card-icon svg {
     height: 29px;
     width: 29px;
-    fill: #000000;
+    fill: var(--text-oposite);
 }
 
 .skills-card-title {
     font-size: 18px;
-    color: #ffff;
+    color: var(--text-primary);
 }
 
 .skills-items-container {
@@ -68,12 +68,12 @@
     gap: 8px;
     text-align: center;
     background: transparent;
-    border: 1px solid #747474ff;
-    color: #ffff;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-primary);
     transition: all .3s ease;
 }
 
 .skill-item:hover {
     transform: scale(1.05);
-    border-color: #ffff;
+    border-color: var(--text-primary);
 }
