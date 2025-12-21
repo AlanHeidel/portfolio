@@ -28,7 +28,6 @@
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   --box-shadow-hover-avatar: 0 10px 30px rgba(141, 141, 141, 0.6);
   --box-shadow-hover-floating-icon: 0 0 20px rgba(155, 155, 155, 0.8);
-
   font-family: sans-serif;
 }
 
@@ -107,5 +106,4 @@ body,
   background: var(--bg-primary);
   font-family: "Montserrat", sans-serif;
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
-  ;
 }

@@ -152,20 +152,22 @@ function App() {
               </div>
             </div>
 
-            <div className="slider-wrapper">
-              <Slider />
-            </div>
+            <div className="slider-scrolldown-container">
+              <div className="slider-wrapper">
+                <Slider />
+              </div>
 
-            <div className="scrolldown-container">
-              <button className="scrolldown-btn" onClick={() => scrollToId('projects')}>
-                <svg className="scrolldown-img" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
-                  <line x1="10" y1="40" x2="50" y2="80"
-                    stroke="currentColor" strokeWidth="12" strokeLinecap="round" />
-                  <line x1="90" y1="40" x2="50" y2="80"
-                    stroke="currentColor" strokeWidth="12" strokeLinecap="round" />
-                </svg>
+              <div className="scrolldown-container">
+                <button className="scrolldown-btn" onClick={() => scrollToId('projects')}>
+                  <svg className="scrolldown-img" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="10" y1="40" x2="50" y2="80"
+                      stroke="currentColor" strokeWidth="12" strokeLinecap="round" />
+                    <line x1="90" y1="40" x2="50" y2="80"
+                      stroke="currentColor" strokeWidth="12" strokeLinecap="round" />
+                  </svg>
 
-              </button>
+                </button>
+              </div>
             </div>
           </div>
 
@@ -228,7 +230,7 @@ function App() {
               </div>
               <p className="section-description">Estoy abierto a nuevas oportunidades y proyectos desafiantes. No dudes en contactarme para conversar y explorar posibles colaboraciones.</p>
               <div className="buttons-container-footer">
-                <a href="https://www.linkedin.com/in/AlanHeidel/" className="btn-primary" target="blank" ><FaLinkedin size={20} className={"icon-btn"} />Perfil de Linkedin</a>
+                <a href="https://www.linkedin.com/in/AlanHeidel/" className="btn-primary" target="blank" ><FaLinkedin size={20} className={"icon-btn"} />Linkedin</a>
                 <a href="mailto:alanmax2015.aheidel@gmail.com" className="btn-secondary" target="blank"><FaEnvelope size={20} className={"icon-btn"} />Enviar e-mail</a>
               </div>
             </div>
