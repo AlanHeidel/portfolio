@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 1600px;
   justify-self: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 10px 40px;
   display: flex;
   align-items: center;

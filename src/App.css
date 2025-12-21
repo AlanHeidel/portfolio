@@ -27,7 +27,7 @@
   justify-content: center;
   color: var(--text-primary);
   text-align: center;
-  height: 100vh;
+  height: 100svh;
   width: 75%;
   margin: 0 auto;
   scroll-margin-top: 100px;
@@ -172,38 +172,31 @@
   margin-right: 10px;
 }
 
-.btn-primary {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--bg-btn-primary);
-  color: var(--text-primary);
-  border: 1px solid var(--bg-btn-primary);
-  padding: 13px 22px;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: var(--box-shadow);
-  text-decoration: none;
-}
-
+.btn-primary,
 .btn-secondary {
   display: flex;
   align-items: center;
-  background-color: var(--bg-btn-secondary);
-  color: var(--text-oposite);
-  border: none;
+  justify-content: center;
   padding: 13px 22px;
-  border: 1px solid var(--bg-btn-secondary);
+  border: none;
   border-radius: 10px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: var(--box-shadow);
   text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--bg-btn-primary);
+  color: var(--text-primary);
+  box-shadow: var(--box-shadow);
+}
+
+.btn-secondary {
+  background-color: var(--bg-btn-secondary);
+  color: var(--text-oposite);
+  box-shadow: var(--box-shadow);
 }
 
 .btn-primary:hover {
@@ -584,7 +577,7 @@
     justify-content: center;
     margin-top: 0;
     margin-bottom: 0;
-    gap: 20px;
+    gap: 30px;
     width: 100%;
   }
 
@@ -599,8 +592,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     margin: 0;
   }
 
@@ -635,12 +628,15 @@
   }
 
   .description-content {
-    font-size: 15px;
-    max-width: 100%;
+    display: none;
   }
 
   .description-content p {
     margin: 10px 0;
+  }
+
+  .text-content {
+    margin-bottom: 30px;
   }
 
   .buttons-container {
@@ -650,25 +646,24 @@
     gap: 10px;
   }
 
-  .social-contact svg {
-    width: 27px;
-    height: 27px;
+  .social-icon {
+    width: 23px;
+    height: 23px;
   }
 
-  .btn-primary {
-    justify-content: center;
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: 600;
-  }
-
+  .btn-primary,
   .btn-secondary {
     justify-content: center;
-    padding: 12px 20px;
-    font-size: 16px;
+    padding: 13px 20px;
+    font-size: 15px;
     font-weight: 600;
-    width: 100%;
+    width: 50%;
+  }
+
+  .btn-primary svg,
+  .btn-secondary svg {
+    width: 17px;
+    height: 17px;
   }
 
   .slider-wrapper {

@@ -108,7 +108,7 @@ function App() {
                 </div>
                 <div className="buttons-container">
                   <button className="btn-primary" onClick={() => scrollToId('projects')}><FaFolderOpen size={18} className={"icon-btn"} /> Ver Proyectos</button>
-                  <a className="btn-secondary" href="https://drive.google.com/file/d/15CBLgleusIqHXhw7K6oxG2CCMxQ5JXAl/view?usp=drive_link" target="blank"><FaDownload size={18} className={"icon-btn"} />Descargar CV</a>
+                  <button className="btn-secondary" onClick={() => window.location.href = 'https://drive.google.com/file/d/15CBLgleusIqHXhw7K6oxG2CCMxQ5JXAl/view?usp=drive_link'} target="_blank" rel="noreferrer"><FaDownload size={18} className={"icon-btn"} />Descargar CV</button>
                 </div>
               </div>
               <div className="avatar-content">
