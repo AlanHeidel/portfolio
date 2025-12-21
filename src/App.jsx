@@ -38,6 +38,7 @@ function App() {
   }, [theme]);
   return (
     <>
+      <Header theme={theme} setTheme={setTheme} />
       <div className="background-container">
         {/* <LiquidEther
           colors={['#5227FF', '#FF9FFC', '#B19EEF']}
@@ -69,7 +70,6 @@ function App() {
         />
       </div>
       <div className="content">
-        <Header theme={theme} setTheme={setTheme} />
         <main className="main-content">
           <div className="index-container" id="home">
             <div className="index-main-content">
