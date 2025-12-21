@@ -618,12 +618,12 @@
   }
 
   .title {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 10px;
   }
 
   .sub-title {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
   }
 
@@ -636,7 +636,7 @@
   }
 
   .text-content {
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 
   .buttons-container {
@@ -647,15 +647,15 @@
   }
 
   .social-icon {
-    width: 23px;
-    height: 23px;
+    width: 25px;
+    height: 25px;
   }
 
   .btn-primary,
   .btn-secondary {
     justify-content: center;
-    padding: 13px 20px;
-    font-size: 15px;
+    padding: 13px 19px;
+    font-size: 14px;
     font-weight: 600;
     width: 50%;
   }
