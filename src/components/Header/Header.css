@@ -3,7 +3,8 @@
   top: 20px;
   width: 100%;
   max-width: 1600px;
-  justify-self: center;
+  left: 0;
+  right: 0;
   margin: 0 auto;
   padding: 10px 40px;
   display: flex;
@@ -139,13 +140,13 @@ nav button:hover {
 
 @media (max-width: 768px) {
   .header-pill {
-    max-width: 90vw;
+    max-width: 85vw;
+    padding: 10px 25px;
     gap: 0;
   }
 
   .header-pill.scrolled {
     max-width: 75vw;
-    padding: 10px 25px;
   }
 
   .header-pill ul {
