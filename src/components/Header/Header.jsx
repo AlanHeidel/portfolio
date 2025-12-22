@@ -93,7 +93,14 @@ export default function Header({ theme, setTheme }) {
           </button>
         </div>
 
+
         <div className="burger-button-container">
+          <div className="theme-container-mobile">
+            <button className="theme-toggle" onClick={toggleTheme} aria-label="Change theme">
+              <img src={SunIcon} alt="" className={`theme-icon sun ${theme === 'dark' ? 'show' : ''}`} />
+              <img src={MoonIcon} alt="" className={`theme-icon moon ${theme === 'light' ? 'show' : ''}`} />
+            </button>
+          </div>
           <BurgerButton open={menuOpen} setOpen={setMenuOpen} />
         </div>
       </div>
@@ -110,12 +117,7 @@ export default function Header({ theme, setTheme }) {
             ))}
           </ul>
         </nav>
-        <div className="theme-container-mobile">
-          <button className="theme-toggle" onClick={toggleTheme} aria-label="Change theme">
-            <img src={SunIcon} alt="" className={`theme-icon sun ${theme === 'dark' ? 'show' : ''}`} />
-            <img src={MoonIcon} alt="" className={`theme-icon moon ${theme === 'light' ? 'show' : ''}`} />
-          </button>
-        </div>
+
       </div>
 
     </header>
