@@ -547,7 +547,7 @@
 
 @media (max-width: 768px) {
   .index-container {
-    padding-top: 50px;
+    padding-top: 0px;
     gap: 25px;
   }
 
