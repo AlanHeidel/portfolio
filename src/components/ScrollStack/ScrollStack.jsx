@@ -61,6 +61,7 @@ export default function ScrollStack() {
 
         let rafId = null;
 
+        const isMobile = () => window.innerWidth <= 768;
         const update = () => {
             rafId = null;
 
@@ -68,20 +69,21 @@ export default function ScrollStack() {
             const dist = enterDistance();
 
             for (const card of cardsRef.current) {
-                const rect = card.getBoundingClientRect();
+                if (!isMobile()) {
+                    const rect = card.getBoundingClientRect();
+                    const start = stickyTopPx + dist;
+                    const end = stickyTopPx;
+                    const t = clamp01((start - rect.top) / (start - end));
 
-                const start = stickyTopPx + dist;
-                const end = stickyTopPx;
-                const t = clamp01((start - rect.top) / (start - end));
+                    // Escala de 0.75 a 1
+                    const scale = 0.75 + 0.25 * t;
 
-                // Escala de 0.75 a 1
-                const scale = 0.75 + 0.25 * t;
+                    // TranslateY de 60px a 0
+                    const translateY = 60 * (1 - t);
 
-                // TranslateY de 60px a 0
-                const translateY = 60 * (1 - t);
-
-                card.style.opacity = "1";
-                card.style.transform = `translate3d(0, ${translateY}px, 0) scale(${scale})`;
+                    card.style.opacity = "1";
+                    card.style.transform = `translate3d(0, ${translateY}px, 0) scale(${scale})`;
+                }
             }
 
         };

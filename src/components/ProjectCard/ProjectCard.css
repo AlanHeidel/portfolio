@@ -170,3 +170,80 @@
 .project-link-demo:hover svg {
     fill: #ffffff;
 }
+
+@media (max-width: 768px) {
+    .project-1 {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .project-image-1 {
+        justify-self: center;
+        height: auto;
+        width: 100%;
+        transform: translateY(50px);
+    }
+
+    .project-information-1 {
+        justify-self: center;
+        justify-content: space-between;
+        background-size: 55px 55px;
+        padding: 20px;
+        height: 350px;
+        width: 80%;
+        flex-direction: column;
+
+    }
+
+    .project-number {
+        top: 60px;
+        left: 25px;
+        font-size: 90px;
+    }
+
+    .project-type {
+        position: absolute;
+        top: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        font-size: 16px;
+    }
+
+    .project-information-1 h3 {
+        margin-top: 68px;
+        font-size: 22px;
+    }
+
+
+    .project-information-1 p {
+        display: none;
+    }
+
+    .tag {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+
+    .project-links {
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .project-links svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .project-link-github,
+    .project-link-demo {
+        align-items: center;
+        justify-content: center;
+        padding: 6px 12px;
+        gap: 5px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+}
