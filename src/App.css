@@ -703,6 +703,10 @@
     margin-bottom: 50px;
   }
 
+  .btn-about-cv-container {
+    justify-content: center;
+  }
+
   .contact-container {
     margin: 80px auto 80px auto;
     width: 90%;

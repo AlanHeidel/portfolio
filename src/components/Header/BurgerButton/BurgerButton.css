@@ -1,0 +1,40 @@
+.burger-button {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    justify-content: space-between;
+    z-index: 99;
+    transition: all .3s ease;
+}
+
+.burger-button span {
+    width: 40px;
+    height: 5px;
+    background: var(--text-secondary);
+    border-radius: 100px;
+    display: inline-block;
+    transition: 0.3s ease;
+    left: 0;
+}
+
+.burger-button.open .top {
+    transform: translateY(12px) rotate(45deg);
+    transform-origin: center;
+    width: auto;
+}
+
+.burger-button.open .bottom {
+    transform: translateY(-13px) rotate(-45deg);
+    transform-origin: center;
+    width: auto;
+    box-shadow: 0 0 10px #495057;
+}
+
+.burger-button.open .middle {
+    transform: translateX(-20px);
+    opacity: 0;
+}
