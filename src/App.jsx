@@ -192,7 +192,7 @@ function App() {
               <div className="about-img-container">
                 <img className="about-img" src={Avatar} alt="" />
               </div>
-              <div>
+              <div className="about-btn-container">
                 <div className="about-description-container">
                   <AboutCard icon={< FaUserCircle />} title='Perfil' description='Estudiante avanzado de Ingeniería en Sistemas. Me apasiona construir soluciones a problemas reales, cuidando tanto la lógica como la experiencia de uso.' />
                   <AboutCard icon={< FaStar />} title='Intereses' description='Me motiva entender cómo funcionan las cosas en profundidad, mejorar productos existentes y aprender nuevas herramientas.' />

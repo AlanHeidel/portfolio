@@ -182,7 +182,6 @@
         justify-self: center;
         height: auto;
         width: 100%;
-        transform: translateY(50px);
     }
 
     .project-information-1 {
@@ -190,10 +189,9 @@
         justify-content: space-between;
         background-size: 55px 55px;
         padding: 20px;
-        height: 350px;
+        height: 450px;
         width: 80%;
         flex-direction: column;
-
     }
 
     .project-number {
@@ -217,7 +215,19 @@
 
 
     .project-information-1 p {
-        display: none;
+        margin-top: 30px;
+        min-height: 110px;
+        max-height: 110px;
+        overflow-y: scroll;
+    }
+
+    .project-information-1 p::after {
+        content: '';
+        position: sticky;
+        bottom: 0;
+        display: block;
+        height: 30px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--bg-project-card));
     }
 
     .tag {
