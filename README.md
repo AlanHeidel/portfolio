@@ -1,16 +1,47 @@
-# React + Vite
+<p align="center">
+<img src="https://img.shields.io/badge/Portfolio-Alan%20Heidel-purple?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/Frontend-React-white?style=for-the-badge&logo=react&logoColor=white" />
+<img src="https://img.shields.io/github/last-commit/AlanHeidel/portfolio?style=for-the-badge&logo=git&logoColor=white&color=purple"> 
+<img src="https://img.shields.io/github/repo-size/AlanHeidel/portfolio?style=for-the-badge&logo=github&logoColor=white&color=white">
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+<p>
+	<img src="https://img.shields.io/badge/Descripción-333333?style=for-the-badge">
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Portfolio personal con información profesional, proyectos desarrollados y tecnologías utilizadas.  
+Fue construido con un enfoque moderno, responsive y orientado a performance.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<p>
+  <img src="https://img.shields.io/badge/Tecnologías%20utilizadas-333333?style=for-the-badge">
+</p>
 
-## Expanding the ESLint configuration
+<p>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react"/>
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PNPM-F69220?style=for-the-badge&logo=pnpm&logoColor=white"/>
+</p>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+<p> <img src="https://img.shields.io/badge/Demo-333333?style=for-the-badge"> </p>
+<p><a href="https://alanheidel.dev" target="_blank">
+  <img src="https://img.shields.io/badge/Visitar%20portfolio-purple?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Visitar Portfolio">
+</a>
+</p>
+
+---
+<p> <img src="https://img.shields.io/badge/Autor-333333?style=for-the-badge"> </p>
+
+Alan Heidel
+<br/>
+Ingeniería en Sistemas - UTN FRRo
+
+---
