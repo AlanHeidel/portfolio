@@ -1,35 +1,48 @@
 .projects-pin {
-    position: relative;
-    padding: 0;
+  position: relative;
+  padding: 0;
 }
 
 .projects-stack {
-    position: relative;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.projects-more {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 70px 0;
+}
+
+.projects-more-link {
+  min-width: 240px;
 }
 
 .project-card {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 100px;
-    height: 75vh;
-    width: 100%;
-    margin-bottom: 130px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    opacity: 1;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 100px;
+  height: 75vh;
+  width: 100%;
+  margin-bottom: 130px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
-    .project-card {
-        top: 17%;
-    }
+  .project-card {
+    top: 17%;
+  }
 
-    .projects-stack {
-        padding-top: 60px;
-    }
+  .projects-stack {
+    padding-top: 60px;
+  }
 
+  .projects-more {
+    margin-top: 32px;
+  }
 }
