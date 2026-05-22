@@ -10,6 +10,17 @@
     min-height: 100dvh;
 }
 
+.projects-more {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 70px 0;
+}
+
+.projects-more-link {
+    min-width: 240px;
+
+}
+
 .project-card {
     position: sticky;
     position: -webkit-sticky;
@@ -33,4 +44,7 @@
         padding-top: 60px;
     }
 
+    .projects-more {
+        margin-top: 32px;
+    }
 }
