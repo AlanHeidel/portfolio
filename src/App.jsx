@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import DotGrid from "./components/backgrounds/DotGrid/DotGrid";
+import DotField from "./components/backgrounds/DotField/DotField";
 import Header from "./components/Header/Header";
 import Avatar from "./assets/img-personal.webp";
 import IconLogo from "./assets/icon.svg"
@@ -57,6 +57,7 @@ function App() {
           autoResumeDelay={3000}
           autoRampDuration={0.6}
         /> */}
+        {/*
         <DotGrid
           dotSize={3}
           gap={25}
@@ -67,6 +68,14 @@ function App() {
           shockStrength={5}
           resistance={750}
           returnDuration={1.5}
+        />*/}
+        <DotField
+          dotRadius={3}
+          dotSpacing={25}
+          gradientFrom={colors.base}
+          gradientTo={colors.base}
+          glowRadius={100}
+          glowColor={'transparent'}
         />
       </div>
       <div className="content">
