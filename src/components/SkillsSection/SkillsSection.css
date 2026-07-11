@@ -1,50 +1,140 @@
 .pill-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 300px;
-    padding: 6px;
-    border-radius: 99px;
-    background: var(--text-oposite);
-    gap: 4px;
-    margin-top: 60px;
-    margin-bottom: 40px;
-    box-shadow: var(--box-shadow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 300px;
+  padding: 6px;
+  border-radius: 99px;
+  background: var(--text-oposite);
+  gap: 4px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  box-shadow: var(--box-shadow);
 }
 
 .pill-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    border-radius: 999px;
-    border: none;
-    height: 100%;
-    width: 100%;
-    background: transparent;
-    color: var(--text-primary);
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  border: none;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s ease;
 }
 
 .pill-btn.active {
-    background: var(--text-primary);
-    color: var(--text-oposite);
+  background: var(--text-primary);
+  color: var(--text-oposite);
 }
 
 .pill-btn:hover:not(.active) {
-    background: var(--bg-hover-header);
+  background: var(--bg-hover-header);
+}
+
+.skills-cards-stage {
+  width: 100%;
 }
 
 .skills-cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 100px;
+  will-change: transform, opacity, filter;
+}
+
+.skills-cards-container--exit {
+  pointer-events: none;
+  animation: skills-section-slide-out 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.skills-cards-container--enter {
+  pointer-events: none;
+  animation: skills-section-slide-in 50ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.skills-cards-container--enter>* {
+  opacity: 0;
+  animation: skills-card-settle-in 250ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.skills-cards-container--enter>*:nth-child(1) {
+  animation-delay: 60ms;
+}
+
+.skills-cards-container--enter>*:nth-child(2) {
+  animation-delay: 110ms;
+}
+
+.skills-cards-container--enter>*:nth-child(3) {
+  animation-delay: 160ms;
+}
+
+.skills-cards-container--enter>*:nth-child(4) {
+  animation-delay: 210ms;
+}
+
+.skills-cards-container--enter>*:nth-child(5) {
+  animation-delay: 260ms;
+}
+
+.skills-cards-container--enter>*:nth-child(6) {
+  animation-delay: 310ms;
+}
+
+@keyframes skills-section-slide-out {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(180px, 0, 0) scale(0.98);
+    filter: blur(8px);
+  }
+}
+
+@keyframes skills-section-slide-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(-180px, 0, 0) scale(0.98);
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes skills-card-settle-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(-28px, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-cards-container {
+    gap: 24px;
+  }
 }
