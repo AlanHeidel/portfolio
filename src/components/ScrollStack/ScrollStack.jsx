@@ -4,6 +4,7 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 import liberty from "../../assets/projects/liberty-img.jpg";
 import ppa from "../../assets/projects/ppa-img.jpg";
 import saas from "../../assets/projects/image-saas.jpg";
+import mediapipe from "../../assets/projects/mediapipe-img.jpg";
 import { FaGithub, FaReact, FaNodeJs } from "react-icons/fa";
 import {
   SiExpress,
@@ -16,27 +17,11 @@ import {
   SiJavascript,
   SiGooglesheets,
   SiTailwindcss,
+  SiGoogle,
 } from "react-icons/si";
-import { TbDatabase } from "react-icons/tb";
+import { TbDatabase, TbFaceId } from "react-icons/tb";
 
 const projects = [
-  {
-    title: "Restaurante",
-    description:
-      "Realizar reservas y pedidos, con seccion administrador que cuenta con un dashboard para la gestión de clientes, reservas, pedidos y demás entidades del negocio. El proyecto fue pensado desde un enfoque de sistema real, modelando múltiples entidades y relaciones.",
-    image: ppa,
-    tags: [
-      { name: "React", icon: FaReact },
-      { name: "Node.js", icon: FaNodeJs },
-      { name: "Express", icon: SiExpress },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "MySQL", icon: SiMysql },
-      { name: "Mikro ORM", icon: TbDatabase },
-    ],
-    repoUrl: "https://github.com/AlanHeidel/tp/blob/main/proposal.md",
-    liveUrl: "",
-    type: "Full Stack",
-  },
   {
     title: "SAAS Deportes",
     description:
@@ -52,24 +37,57 @@ const projects = [
       { name: "Tailwind", icon: SiTailwindcss },
     ],
     repoUrl: "",
-    liveUrl: "",
+    liveUrl: "https://reservas-saas-gold.vercel.app/",
     type: "Full Stack",
   },
+  // {
+  //   title: "Rediseño MuOnline",
+  //   description:
+  //     "El proyecto partió de un template existente, sobre el cual realicé un rediseño visual completo para mejorar la estética, la identidad del servidor y la experiencia de usuario. Además, implementé una integración con Google Sheets para la gestión dinámica de contenido (noticias y datos actualizables sin necesidad de modificar el código), permitiendo una administración más simple y eficiente del sitio.",
+  //   image: liberty,
+  //   tags: [
+  //     { name: "PHP", icon: SiPhp },
+  //     { name: "HTML", icon: SiHtml5 },
+  //     { name: "CSS", icon: SiCss3 },
+  //     { name: "JavaScript", icon: SiJavascript },
+  //     { name: "Google Sheets API", icon: SiGooglesheets },
+  //   ],
+  //   repoUrl: "https://github.com/AlanHeidel/webengine-mu-modernized",
+  //   liveUrl: "https://alan-heidel.freedev.app/new/",
+  //   type: "Frontend",
+  // },
   {
-    title: "Rediseño MuOnline",
+    title: "AI Face Detection",
     description:
-      "El proyecto partió de un template existente, sobre el cual realicé un rediseño visual completo para mejorar la estética, la identidad del servidor y la experiencia de usuario. Además, implementé una integración con Google Sheets para la gestión dinámica de contenido (noticias y datos actualizables sin necesidad de modificar el código), permitiendo una administración más simple y eficiente del sitio.",
-    image: liberty,
+      "Aplicación web de inteligencia artificial que permite detectar landmarks faciales en tiempo real desde la cámara del usuario y renderizar los resultados sobre un canvas superpuesto al video. El proyecto demuestra integración de modelos de IA en el navegador, procesamiento client-side, manejo de webcam, renderizado dinámico y una interfaz orientada a experiencias interactivas.",
+    image: mediapipe,
     tags: [
-      { name: "PHP", icon: SiPhp },
-      { name: "HTML", icon: SiHtml5 },
-      { name: "CSS", icon: SiCss3 },
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "Google Sheets API", icon: SiGooglesheets },
+      { name: "React", icon: FaReact },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "MediaPipe", icon: SiGoogle },
+      { name: "Computer Vision", icon: TbFaceId },
+      { name: "Tailwind", icon: SiTailwindcss },
     ],
-    repoUrl: "https://github.com/AlanHeidel/webengine-mu-modernized",
+    repoUrl: "https://github.com/AlanHeidel/proyecto-mediapipe",
     liveUrl: "",
-    type: "Frontend",
+    type: "AI Web App",
+  },
+  {
+    title: "Restaurante",
+    description:
+      "Realizar reservas y pedidos, con seccion administrador que cuenta con un dashboard para la gestión de clientes, reservas, pedidos y demás entidades del negocio. El proyecto fue pensado desde un enfoque de sistema real, modelando múltiples entidades y relaciones.",
+    image: ppa,
+    tags: [
+      { name: "React", icon: FaReact },
+      { name: "Node.js", icon: FaNodeJs },
+      { name: "Express", icon: SiExpress },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "MySQL", icon: SiMysql },
+      { name: "Mikro ORM", icon: TbDatabase },
+    ],
+    repoUrl: "https://github.com/AlanHeidel/fullstack-tp-utnfrro",
+    liveUrl: "https://utnfrro-frontend.vercel.app/",
+    type: "Full Stack",
   },
 ];
 

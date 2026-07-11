@@ -185,7 +185,9 @@ function App() {
               <div className="title-backdrop" data-text="Proyectos">
                 <h2>Proyectos</h2>
               </div>
-              <p className="section-description">Proyectos que muestran cómo abordo problemas reales y los transformo en soluciones funcionales.</p>
+              <p className="section-description">
+                Una selección de proyectos que resume el tipo de soluciones que me interesa diseñar y desarrollar.
+              </p>
               <ScrollStack />
             </div>
 
