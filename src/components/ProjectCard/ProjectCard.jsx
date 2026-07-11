@@ -13,8 +13,8 @@ export default function ProjectCard({
   type,
 }) {
   return (
-    <article className="project-card">
-      <div className={`project-1`}>
+    <article className={`project-card ${className}`.trim()}>
+      <div className="project-1">
         <div className="project-image-1">
           <img src={image} alt={title} />
         </div>
@@ -31,20 +31,36 @@ export default function ProjectCard({
               </span>
             ))}
           </div>
-          <div className="project-links">
-            <a href={liveUrl} className="project-link-demo" target="blank">
-              <i className="project-link">
-                <FaEye size={27} color={"#ffff"} />
-              </i>
-              Ver demo
-            </a>
-            <a href={repoUrl} className="project-link-github" target="blank">
-              <i className="project-link">
-                <FaGithub size={27} color={"#ffff"} />
-              </i>
-              Ver código
-            </a>
-          </div>
+          {(liveUrl || repoUrl) && (
+            <div className="project-links">
+              {liveUrl && (
+                <a
+                  href={liveUrl}
+                  className="project-link-demo"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="project-link">
+                    <FaEye size={27} color="#ffff" />
+                  </i>
+                  Ver demo
+                </a>
+              )}
+              {repoUrl && (
+                <a
+                  href={repoUrl}
+                  className="project-link-github"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="project-link">
+                    <FaGithub size={27} color="#ffff" />
+                  </i>
+                  Ver código
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </article>

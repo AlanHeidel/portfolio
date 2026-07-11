@@ -19,7 +19,7 @@ export default function AboutCard({
             </div>
             <div className='social-contact'>
                 {links.map((link, i) => (
-                    <a href={link.href} key={i} target='blank' className="social-icon" >
+                    <a href={link.href} key={i} target="_blank" rel="noreferrer" className="social-icon" >
                         {link.icon}
                     </a>
                 ))}

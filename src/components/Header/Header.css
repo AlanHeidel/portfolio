@@ -85,6 +85,11 @@
   background: var(--bg-hover-header);
 }
 
+.header-nav-desktop button.active,
+.header-nav-mobile button.active {
+  background: var(--bg-hover-header);
+}
+
 .header-pill.scrolled .header-nav-desktop button {
   font-size: 15px;
 }

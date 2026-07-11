@@ -1,21 +1,21 @@
 import "./Header.css";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import Icon from "../../assets/icon.svg";
 import Icon2 from "../../assets/icon2.svg";
+import SunIcon from "../../assets/theme/sun-icon.svg";
+import MoonIcon from "../../assets/theme/moon-icon.svg";
 import { scrollToId } from "../../utils/scrollToId.jsx";
-import SunIcon from "../../assets/theme/sun-icon.svg"
-import MoonIcon from "../../assets/theme/moon-icon.svg"
 import BurgerButton from "./BurgerButton/BurgerButton.jsx";
 
 const FULL_NAME = "Alan Heidel";
 const navLinks = [
-  { label: "Inicio", href: "home" },
-  { label: "Proyectos", href: "projects" },
-  { label: "Sobre Mi", href: "aboutme" },
-  { label: "Skills", href: "skills" },
-  { label: "Contacto", href: "contact" },
+  { label: "Inicio", kind: "home", id: "home" },
+  { label: "Proyectos", kind: "route", to: "/projects" },
+  { label: "Sobre Mi", kind: "section", id: "aboutme" },
+  { label: "Skills", kind: "section", id: "skills" },
+  { label: "Contacto", kind: "section", id: "contact" },
 ];
-
 
 export default function Header({ theme, setTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,24 +23,25 @@ export default function Header({ theme, setTheme }) {
   const [displayName, setDisplayName] = useState(FULL_NAME);
   const typingTimeout = useRef();
   const headerRef = useRef(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const onClickOutside = (e) => {
-      if (headerRef.current && !headerRef.current.contains(e.target)) {
+    const onClickOutside = (event) => {
+      if (headerRef.current && !headerRef.current.contains(event.target)) {
         setMenuOpen(false);
       }
     };
-    document.addEventListener('mousedown', onClickOutside);
-    return () => document.removeEventListener('mousedown', onClickOutside);
+
+    document.addEventListener("mousedown", onClickOutside);
+    return () => document.removeEventListener("mousedown", onClickOutside);
   }, []);
 
   useEffect(() => {
-    document.documentElement.classList.remove('light', 'dark');
-    document.documentElement.classList.add(theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+    setMenuOpen(false);
+  }, [location.pathname, location.hash]);
 
-  const toggleTheme = () => setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+  const toggleTheme = () => setTheme((prev) => (prev === "dark" ? "light" : "dark"));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,13 +65,46 @@ export default function Header({ theme, setTheme }) {
         scrolled ? prev.slice(0, -1) : FULL_NAME.slice(0, prev.length + 1)
       );
     }, 60);
+
     return () => clearTimeout(typingTimeout.current);
   }, [scrolled, displayName]);
 
+  const navigateToHomeSection = (id) => {
+    if (location.pathname === "/") {
+      scrollToId(id);
+      return;
+    }
+
+    navigate(`/#${id}`);
+  };
+
+  const handleLogoClick = () => {
+    navigateToHomeSection("home");
+  };
+
+  const handleNavClick = (link) => {
+    if (link.kind === "route") {
+      if (location.pathname === link.to) {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        return;
+      }
+
+      navigate(link.to);
+      return;
+    }
+
+    navigateToHomeSection(link.id);
+  };
+
+  const isProjectsRoute = location.pathname === "/projects";
+
   return (
-    <header ref={headerRef} className={`header-pill ${scrolled ? " scrolled" : ""} ${menuOpen ? "open" : ""}`}>
-      <div className='header-container'>
-        <div onClick={() => scrollToId('home')} className={`name-container${scrolled ? " scrolled" : ""}`}>
+    <header
+      ref={headerRef}
+      className={`header-pill ${scrolled ? " scrolled" : ""} ${menuOpen ? "open" : ""}`}
+    >
+      <div className="header-container">
+        <div onClick={handleLogoClick} className={`name-container${scrolled ? " scrolled" : ""}`}>
           <img src={Icon} alt="Logo" width={22} height={22} />
           <span className="name">{displayName}</span>
           <img src={Icon2} alt="Logo" width={22} height={22} />
@@ -78,9 +112,14 @@ export default function Header({ theme, setTheme }) {
 
         <nav className="header-nav-desktop">
           <ul className="header-list-desktop">
-            {navLinks.map((link, i) => (
-              <li key={i}>
-                <button onClick={() => scrollToId(link.href)} >{link.label}</button>
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <button
+                  className={link.kind === "route" && isProjectsRoute ? "active" : ""}
+                  onClick={() => handleNavClick(link)}
+                >
+                  {link.label}
+                </button>
               </li>
             ))}
           </ul>
@@ -88,17 +127,32 @@ export default function Header({ theme, setTheme }) {
 
         <div className="theme-container">
           <button className="theme-toggle" onClick={toggleTheme} aria-label="Change theme">
-            <img src={SunIcon} alt="" className={`theme-icon sun ${theme === 'dark' ? 'show' : ''}`} />
-            <img src={MoonIcon} alt="" className={`theme-icon moon ${theme === 'light' ? 'show' : ''}`} />
+            <img
+              src={SunIcon}
+              alt=""
+              className={`theme-icon sun ${theme === "dark" ? "show" : ""}`}
+            />
+            <img
+              src={MoonIcon}
+              alt=""
+              className={`theme-icon moon ${theme === "light" ? "show" : ""}`}
+            />
           </button>
         </div>
-
 
         <div className="burger-button-container">
           <div className="theme-container-mobile">
             <button className="theme-toggle" onClick={toggleTheme} aria-label="Change theme">
-              <img src={SunIcon} alt="" className={`theme-icon sun ${theme === 'dark' ? 'show' : ''}`} />
-              <img src={MoonIcon} alt="" className={`theme-icon moon ${theme === 'light' ? 'show' : ''}`} />
+              <img
+                src={SunIcon}
+                alt=""
+                className={`theme-icon sun ${theme === "dark" ? "show" : ""}`}
+              />
+              <img
+                src={MoonIcon}
+                alt=""
+                className={`theme-icon moon ${theme === "light" ? "show" : ""}`}
+              />
             </button>
           </div>
           <BurgerButton open={menuOpen} setOpen={setMenuOpen} />
@@ -107,19 +161,19 @@ export default function Header({ theme, setTheme }) {
       <div className={`menu-mobile ${menuOpen ? "open" : ""}`}>
         <nav className="header-nav-mobile">
           <ul className="header-list-mobile">
-            {navLinks.map((link, i) => (
-              <li key={i}>
-                <button onClick={() => {
-                  scrollToId(link.href);
-                  setMenuOpen(false);
-                }} >{link.label}</button>
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <button
+                  className={link.kind === "route" && isProjectsRoute ? "active" : ""}
+                  onClick={() => handleNavClick(link)}
+                >
+                  {link.label}
+                </button>
               </li>
             ))}
           </ul>
         </nav>
-
       </div>
-
     </header>
   );
 }
